@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "server": "pnpm run dev --prefix server",
+    "client": "pnpm run dev --prefix client",
+    "start": "concurrently \"pnpm run server\" \"pnpm run client\"",
+    "installClient": "pnpm install --prefix client",
+    "installServer": "pnpm install --prefix server",
+    "install": "pnpm run installClient && pnpm run installServer",
+    "format": "pnpm run format-client && pnpm run format-server",
+    "lint": "pnpm run lint-client && pnpm run lint-server",
+    "format-client": "pnpm run --prefix client format",
+    "format-server": "pnpm run --prefix server format",
+    "lint-client": "pnpm run --prefix client lint",
+    "lint-server": "pnpm run --prefix server lint",
+    "lint-format": "pnpm run lint && pnpm run format",
+    "build-client": "pnpm run --prefix client build",
+    "build-server": "pnpm run --prefix server build",
+    "build": "pnpm run build-client && pnpm run build-server"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

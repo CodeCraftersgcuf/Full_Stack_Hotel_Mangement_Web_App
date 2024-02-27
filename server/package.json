@@ -8,7 +8,7 @@
     "build": "tsc",
     "start": "node dist/app.js",
     "exec": "concurrently \"npx tsc --watch\" \"ts-node src/app.ts\"",
-    "dev": "npm run exec && nodemon src/app.ts",
+    "dev": "pnpm run exec && nodemon src/app.ts",
     "ext": "ts",
     "format": "prettier --write .",
     "lint": "eslint 'src/**/*.ts' --fix"
